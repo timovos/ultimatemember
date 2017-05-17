@@ -322,7 +322,7 @@ class UM_Shortcodes {
 
 		$this->template_load($template, $args);
 
-		$this->dynamic_css($args);
+		//$this->dynamic_css($args);
 
 		if (um_get_requested_user() || $mode == 'logout') {
 			um_reset_user();
@@ -421,11 +421,11 @@ class UM_Shortcodes {
 		}
 
 		if( isset( $paths ) && ! empty( $paths ) ){
-			
+
 			foreach ($paths as $k => $files) {
 
 				if( isset( $files ) && ! empty( $files ) ){
-					
+
 					foreach ($files as $file) {
 
 						$clean_filename = $this->get_template_name( $file );
@@ -454,7 +454,7 @@ class UM_Shortcodes {
 				}
 
 			}
-			
+
 		}
 
 		return $array;
@@ -560,7 +560,7 @@ class UM_Shortcodes {
 	    	um_fetch_user( $user_ID );
 	    }
 
-	    
+
 
 	    $current_user_role = um_user('role');
 
